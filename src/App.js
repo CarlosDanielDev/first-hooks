@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 function App() {
+  // states
   const [techs, setTech] = useState([]);
   const [newTech, setNewTech] = useState('');
   function handleAdd() {
