@@ -4,6 +4,7 @@ function App() {
   // states
   const [techs, setTech] = useState([]);
   const [newTech, setNewTech] = useState('');
+
   function handleAdd() {
     setTech([...techs, newTech]);
     setNewTech('');
