@@ -1,8 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function App() {
+  const [techs, setTech] = useState(['Reactjs', 'React-Native']);
+  const [newTech, setNewTech] = useState('');
+  function handleAdd() {
+    setTech([...techs, newTech]);
+    setNewTech('');
+  }
+
   return (
-     <h1>Olá Mundo!</h1>
+    <>
+      <ul>
+        {techs.map(t => (
+          <li key={t}>{t}</li>
+        ))}
+      </ul>
+      <input value={newTech} onChange={e => setNewTech(e.target.value)} />
+      <button type="button" onClick={handleAdd}>
+        Adicionar
+      </button>
+    </>
   );
 }
 
